@@ -9,24 +9,15 @@ Next, we'll dive a little deeper and show you how to create, customize and play 
 While the lessons in this workshop are all specific to Python, most programming languages have some common elements. 
 So learning the foundations of one language will help make the task of learning other language much easier in the future.
 
-[comment]: <> (---)
-
-[comment]: <> (### Outline)
-
-[comment]: <> (1. [Introduction to Python]&#40;#part-a---an-introduction-to-python&#41;)
-   
-[comment]: <> (    a. [Variables and Loops]&#40;#lesson-1-variables-and-loops&#41;)
-   
-[comment]: <> (    b. [Conditionals &#40;If / Else&#41;]&#40;#lesson-2-conditionals-if--else&#41;)
-
-[comment]: <> (    c. [Defining Functions]&#40;#lesson-3-defining-functions&#41;)
-
-[comment]: <> (---)
-
 Let's get started and have some fun!
 
----
+___
+## Outline
+1. [Introduction to Python](#part-a---an-introduction-to-python)
+2. [The Turtle Library For Python](#part-b---the-turtle-library-for-python)
+3. [Pong](#part-c---pong)
 
+---
 # Part A - An Introduction to Python
 
 Hop on over to [this website](https://replit.com/join/ezeljogxsx-wiewinnipeg) where we can try out some coding.
