@@ -8,16 +8,16 @@
 import turtle
 
 # Create a screen for the game
-screen = turtle.Screen()
-screen.title("Pong game")
-screen.bgcolor("black")
-screen.setup(width=575, height=325)
+screen = turtle.Screen() # creates screen
+screen.title("Pong game") # displays title on screen
+screen.bgcolor("black") # sets background colour
+screen.setup(width=575, height=325) # sets screen size
 
 # Create the left paddle
 left_pad = turtle.Turtle()
 left_pad.speed(0)   # not moving when the game starts
 left_pad.shape("square")
-left_pad.color("white")
+left_pad.color("white") # sets paddle color
 left_pad.shapesize(stretch_wid=3, stretch_len=0.5)    # stretch out a square to make a rectangular shape
 left_pad.penup()    # don't draw a path when moving
 left_pad.goto(-250, 0)  # start on left side of screen
@@ -37,8 +37,11 @@ ball.shape("circle")
 ball.color("blue")
 ball.penup()
 ball.goto(0, 0)
+
 # initial speed and direction for the ball to move:
-ball.speed(4)
+################### INPUT HERE ###########################
+ball.speed(4) # sets your ball speed
+##########################################################
 ball.dx = 5
 ball.dy = -5
 
@@ -58,27 +61,32 @@ scoreboard.write("Left_player : 0 Right_player: 0",
 
 
 # Functions to move the paddles up and down:
+
+################### INPUT HERE ###########################
+paddle_speed = 40; # sets how far you can move your paddle with one key press
+##########################################################
+
 def paddleA_up():
-    y = left_pad.ycor()
-    y += 20
+    y = left_pad.ycor() 
+    y += paddle_speed 
     left_pad.sety(y)
 
 
 def paddleA_down():
     y = left_pad.ycor()
-    y -= 20
+    y -= paddle_speed
     left_pad.sety(y)
 
 
 def paddleB_up():
     y = right_pad.ycor()
-    y += 20
+    y += paddle_speed
     right_pad.sety(y)
 
 
 def paddleB_down():
     y = right_pad.ycor()
-    y -= 20
+    y -= paddle_speed
     right_pad.sety(y)
 
 
@@ -92,6 +100,7 @@ screen.onkeypress(paddleB_down, "Down")
 while True:
     screen.update()
 
+    # Moves the ball
     ball.setx(ball.xcor() + ball.dx)
     ball.sety(ball.ycor() + ball.dy)
 
@@ -124,13 +133,19 @@ while True:
             font=("Courier", 14, "normal"))
 
     # Check for a collision between the right paddle and the ball:
+    
+    ################### INPUT HERE ###########################
+    paddle_hit = 80 # sets the "hit" zone of your paddle.
+    ##########################################################
+    
     if (ball.xcor() > 245 and ball.xcor() < 255) \
-            and (ball.ycor() < right_pad.ycor() + 40 and ball.ycor() > right_pad.ycor() - 40):
+            and (ball.ycor() < right_pad.ycor() + paddle_hit and ball.ycor() > right_pad.ycor() - paddle_hit):
         ball.setx(245)
         ball.dx *= -1
               
     # Check for a collision between the left paddle and the ball:
     if (ball.xcor() < -245 and ball.xcor() > -255) \
-            and (ball.ycor() < left_pad.ycor() + 40 and ball.ycor() > left_pad.ycor() - 40):
+            and (ball.ycor() < left_pad.ycor() + paddle_hit and ball.ycor() > left_pad.ycor() - paddle_hit):
         ball.setx(-245)
         ball.dx *= -1
+
