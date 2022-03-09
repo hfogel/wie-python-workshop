@@ -15,11 +15,13 @@ screen.setup(width=575, height=325)
 
 # Create the left paddle
 left_pad = turtle.Turtle()
-left_pad.speed(0)   # not moving when the game starts
+left_pad.speed(0)  # not moving when the game starts
 left_pad.shape("square")
 left_pad.color("white")
-left_pad.shapesize(stretch_wid=3, stretch_len=0.5)    # stretch out a square to make a rectangular shape
-left_pad.penup()    # don't draw a path when moving
+left_pad.shapesize(
+    stretch_wid=3, stretch_len=0.5
+)  # stretch out a square to make a rectangular shape
+left_pad.penup()  # don't draw a path when moving
 left_pad.goto(-250, 0)  # start on left side of screen
 
 # Create the right paddle
@@ -53,8 +55,9 @@ scoreboard.color("blue")
 scoreboard.penup()
 scoreboard.hideturtle()
 scoreboard.goto(0, 120)
-scoreboard.write("Left_player : 0 Right_player: 0",
-                 align="center", font=("Courier", 14, "normal"))
+scoreboard.write(
+    "Left_player : 0 Right_player: 0", align="center", font=("Courier", 14, "normal")
+)
 
 
 # Functions to move the paddles up and down:
@@ -89,16 +92,16 @@ screen.onkeypress(paddleA_down, "x")
 screen.onkeypress(paddleB_up, "Up")
 screen.onkeypress(paddleB_down, "Down")
 
-while True:
+while True:  # do this forever!
     screen.update()
 
     ball.setx(ball.xcor() + ball.dx)
     ball.sety(ball.ycor() + ball.dy)
 
-    # Make sure the ball doesn't go off the top or bottom of the screen:
+    # Make sure the ball doesn't go off the top or bottom of the screen
     if ball.ycor() > 150:
         ball.sety(150)
-        ball.dy *= -1
+        ball.dy *= -1  # if it's at the boundary, bounce back in the opposite direction!
 
     if ball.ycor() < -150:
         ball.sety(-150)
@@ -110,27 +113,37 @@ while True:
         ball.dy *= -1
         left_player_score += 1
         scoreboard.clear()
-        scoreboard.write("Left_player : {} Right_player: {}".format(
-            left_player_score, right_player_score), align="center",
-            font=("Courier", 14, "normal"))
+        scoreboard.write(
+            "Left_player : {} Right_player: {}".format(
+                left_player_score, right_player_score
+            ),
+            align="center",
+            font=("Courier", 14, "normal"),
+        )
 
     if ball.xcor() < -300:
         ball.goto(0, 0)
         ball.dy *= -1
         right_player_score += 1
         scoreboard.clear()
-        scoreboard.write("Left_player : {} Right_player: {}".format(
-            left_player_score, right_player_score), align="center",
-            font=("Courier", 14, "normal"))
+        scoreboard.write(
+            "Left_player : {} Right_player: {}".format(
+                left_player_score, right_player_score
+            ),
+            align="center",
+            font=("Courier", 14, "normal"),
+        )
 
     # Check for a collision between the right paddle and the ball:
-    if (ball.xcor() > 245 and ball.xcor() < 255) \
-            and (ball.ycor() < right_pad.ycor() + 40 and ball.ycor() > right_pad.ycor() - 40):
+    if (ball.xcor() > 245 and ball.xcor() < 255) and (
+        ball.ycor() < right_pad.ycor() + 40 and ball.ycor() > right_pad.ycor() - 40
+    ):
         ball.setx(245)
         ball.dx *= -1
-              
+
     # Check for a collision between the left paddle and the ball:
-    if (ball.xcor() < -245 and ball.xcor() > -255) \
-            and (ball.ycor() < left_pad.ycor() + 40 and ball.ycor() > left_pad.ycor() - 40):
+    if (ball.xcor() < -245 and ball.xcor() > -255) and (
+        ball.ycor() < left_pad.ycor() + 40 and ball.ycor() > left_pad.ycor() - 40
+    ):
         ball.setx(-245)
         ball.dx *= -1

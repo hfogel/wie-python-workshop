@@ -2,10 +2,6 @@
 
 Hop on over to [this website](https://replit.com/join/ezeljogxsx-wiewinnipeg) where we can try out some coding.
 
-You should see a page that looks something like this:
-
-![A dummy image for now](./images/pong.png "Replit launch page")
-
 On the left-hand side is the **Files** tab. 
 
 You should see a list of files that have already been added to our project.
