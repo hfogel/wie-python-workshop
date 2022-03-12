@@ -51,12 +51,12 @@ right_player_score = 0
 # Display the score
 scoreboard = turtle.Turtle()
 scoreboard.speed(0)
-scoreboard.color("blue")
+scoreboard.color("white")
 scoreboard.penup()
 scoreboard.hideturtle()
 scoreboard.goto(0, 120)
 scoreboard.write(
-    "Left_player : 0 Right_player: 0", align="center", font=("Courier", 14, "normal")
+    "Left_player: 0 Right_player: 0", align="center", font=("Courier", 14, "normal")
 )
 
 
@@ -114,7 +114,7 @@ while True:  # do this forever!
         left_player_score += 1
         scoreboard.clear()
         scoreboard.write(
-            "Left_player : {} Right_player: {}".format(
+            "Left_player: {} Right_player: {}".format(
                 left_player_score, right_player_score
             ),
             align="center",
@@ -127,7 +127,7 @@ while True:  # do this forever!
         right_player_score += 1
         scoreboard.clear()
         scoreboard.write(
-            "Left_player : {} Right_player: {}".format(
+            "Left_player: {} Right_player: {}".format(
                 left_player_score, right_player_score
             ),
             align="center",
