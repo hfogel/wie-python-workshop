@@ -1,6 +1,6 @@
 # Part A - An Introduction to Python
 
-Hop on over to [this website](https://replit.com/join/ezeljogxsx-wiewinnipeg) where we can try out some coding.
+Hop on over to [this website](https://replit.com/@WIEWinnipeg/wie-python-workshop-1?v=1) where we can try out some coding.
 
 On the left-hand side is the **Files** tab. 
 
