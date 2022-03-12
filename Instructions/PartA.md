@@ -19,7 +19,7 @@ On the right-hand side of the screen there are three tabs: **Console**, **Shell*
 Click to open the **Console** tab. This will allow us to see any *output* from our program.
 
 
-## Lesson 1: Variables and Loops
+## Lesson 1: Variables, Loops and Conditionals (If / Else)
 Any programming language is a way for us to give instructions to and interact with a computer. 
 Assigning variables in Python is similar to assigning variables in math class. 
 For example,
@@ -64,21 +64,9 @@ name = "Hannah"  # note the "" around my name (this is called a STRING)
 my_dogs = ["Jax", "Ozzy"]  # putting things inside [] makes a LIST
 ```
 
-We can access the items in a list using *indexing*:
-```python
-print(my_dogs[1])  # this has an unexpected result! (Python uses 0-based indexing)
-```
-
-What if I had a long list of dog names, and wanted to print them all?
-There is a much faster way than:
-```python
-print(my_dogs[0])
-print(my_dogs[1])
-print(my_dogs[2])
-...
-print(my_dogs[99])
-```
-The more efficient way is to use a **loop**. There are two different kinds of loops in Python that we will cover.
+### Loops
+Another important programming feature is **loops**. 
+There are two different kinds of loops that we will cover.
 
 A **for loop** looks like this:
 ```python
@@ -110,7 +98,7 @@ A key difference between **for** and **while** loops is that a **for loop** runs
 (the index variable gets incremented automatically), whereas a **while loop** could run forever -
 we're in charge of stopping it by changing the value of the loop variable
 
-## Lesson 2: Conditionals (If / Else)
+### Conditionals (If / Else)
 
 Sometimes we only want to execute a particular block of code under certain conditions.
 For example, what if we only wanted to print numbers less than or equal to 5 in our countdown?
@@ -158,7 +146,7 @@ ___
 >- Modify the above *Countdown* code to count up instead of down!
 ___
 
-## Lesson 3: Defining Functions
+## Lesson 2: Defining Functions
 Python has lots of built-in functions, like the `print` function we've already used.
 These are really handy, but don't cover everything we may want to do.
 We can also create our own functions. For example:
