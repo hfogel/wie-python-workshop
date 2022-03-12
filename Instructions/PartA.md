@@ -40,7 +40,7 @@ Let's add some **print statements** to our code.
 ```python
 print(x)
 print(y)
-print(x + 12)
+print(f"The value of X is {x}")
 ```
 
 Pressing the green **Run** button at the top of the screen tells the Python engine in the background to run 
@@ -51,7 +51,7 @@ The output should look something like this:
 > python lesson1.py
 2
 10
-14
+The value of X is 2
 ```
 
 The first line in the block above is what told the computer which file to run, and to run it using Python.
@@ -65,27 +65,11 @@ my_dogs = ["Jax", "Ozzy"]  # putting things inside [] makes a LIST
 ```
 
 ### Loops
-Another important programming feature is **loops**. 
-There are two different kinds of loops that we will cover.
+Another important programming feature is **loops**.
+Loops are useful when we want to do things repeatedly.
 
-A **for loop** looks like this:
-```python
-for dog in my_dogs:
-    print(f"{dog} is a good boy!")
-```
-Pay special attention to the colon (:) at the end of the first line, and the fact that the next line is indented.
-These two things are part of Python's syntax rules. 
+For example, a **while loop** looks like this:
 
-We can also do calculations inside a for loop:
-```python
-list_of_numbers = [1, 2, 3, 4, 5]
-for number in list_of_numbers:
-    new_number = number * 10
-    print(new_number)
-```
-
-A **while loop** has similar behaviour, but is controlled a little differently.
-The lines in a while loop get executed over and over again until the while (*statement*) part is no longer true.
 ```python
 countdown = 10
 while countdown > 0:
@@ -94,9 +78,11 @@ while countdown > 0:
 print("Blast Off!!!!")
 ```
 
-A key difference between **for** and **while** loops is that a **for loop** runs for a pre-determined number of iterations
-(the index variable gets incremented automatically), whereas a **while loop** could run forever -
-we're in charge of stopping it by changing the value of the loop variable
+The lines inside the while loop get executed over and over again until the while (*statement*) part is no longer true. 
+Pay special attention to the colon (:) at the end of the first line, and the fact that the next line is indented.
+These two things are part of Python's syntax rules. Without them, running the code will give an error. 
+
+We also need to remember to update the looping variable (`countdown`). If we don't, the loop could run forever!
 
 ### Conditionals (If / Else)
 
