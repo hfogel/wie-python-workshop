@@ -110,23 +110,6 @@ A key difference between **for** and **while** loops is that a **for loop** runs
 (the index variable gets incremented automatically), whereas a **while loop** could run forever -
 we're in charge of stopping it by changing the value of the loop variable
 
-___
->### *Coding Challenge #1*
->- Define three new variables: *name* (your name), *city* (where you were born), and *year* (when you were born).
->
->- Use the **print** function to display:                                   
->  `<your name> was born in <city> in <year>`       
-___
->### *Coding Challenge #2*
->- Predict the value of the `direction` variable after the following lines of code are executed:
->     ```python
->    initial = "left"
->    direction = initial
->    initial = "right"
->    ```
->- Was your prediction correct? Try it out and see.
-___
-
 ## Lesson 2: Conditionals (If / Else)
 
 Sometimes we only want to execute a particular block of code under certain conditions.
@@ -155,13 +138,28 @@ while countdown > 0:
     countdown = countdown - 1
 ```
 
-
+___
+>### *Coding Challenge #1*
+>- Define three new variables: *name* (your name), *city* (where you were born), and *year* (when you were born).
+>
+>- Use the **print** function to display:                                   
+>  `<your name> was born in <city> in <year>`       
+___
+>### *Coding Challenge #2*
+>- Predict the value of the `direction` variable after the following lines of code are executed:
+>     ```python
+>    initial = "left"
+>    direction = initial
+>    initial = "right"
+>    ```
+>- Was your prediction correct? Try it out and see.
+___
 >### *Coding Challenge #3*
->- Modify the above block of code to count up instead of down!
+>- Modify the above *Countdown* code to count up instead of down!
 ___
 
 ## Lesson 3: Defining Functions
-We've already used a few of Python's built-in functions (**range**, **len**, **print**).
+Python has lots of built-in functions, like the `print` function we've already used.
 These are really handy, but don't cover everything we may want to do.
 We can also create our own functions. For example:
 ```python
@@ -185,7 +183,7 @@ print(f"My speed is {s} km/h")
 
 Note that outside of the function we only have access to `s` (what we chose to call the returned variable),
 and can't access the variable called `speed` that was defined inside the function. 
-Running something like `print(speed)` would produce an error.
+Running the command `print(speed)` would produce an error.
 
 Here's another example function definition, with code to call it below.
 ```python
@@ -197,13 +195,14 @@ def say_hello(name, language):
     else:
         print("Sorry, I don't know that language :(")
 ```
-There's no **return** statement here, since the function prints to the console rather than computing a value.
+There's no **return** statement here, since the function prints to the console rather than computing a new value.
 
 To call the function, we can use:
 ```python
 say_hello("Jasmin", "French")
 ```
 
+___
 
 >### *Coding Challenge #4*
 >- Test out the `say_hello` function by passing in a different name and language. 
