@@ -39,8 +39,8 @@ Let's add some **print statements** to our code.
 
 ```python
 print(x)
-print(x + 12)
 print(y)
+print(x + 12)
 ```
 
 Pressing the green **Run** button at the top of the screen tells the Python engine in the background to run 
@@ -50,8 +50,8 @@ The output should look something like this:
 ```commandline
 > python lesson1.py
 2
-14
 10
+14
 ```
 
 The first line in the block above is what told the computer which file to run, and to run it using Python.
@@ -69,10 +69,6 @@ We can access the items in a list using *indexing*:
 print(my_dogs[1])  # this has an unexpected result! (Python uses 0-based indexing)
 ```
 
-We can also find out how many items are in a list using the **len** function:
-```python
-print(len(my_dogs))
-```
 What if I had a long list of dog names, and wanted to print them all?
 There is a much faster way than:
 ```python
@@ -86,29 +82,18 @@ The more efficient way is to use a **loop**. There are two different kinds of lo
 
 A **for loop** looks like this:
 ```python
-for number in range(1, 5):
-    print(number)
-```
-Pay special attention to the colon (:) at the end of the first line, and the fact that the next line is indented.
-These two things are part of Python's syntax rules.
-
-Also notice that when we use the **range** function, the `number` variable starts at the provided start point (1)
-and goes up to, *but does not include*, the provided end point (5).
-If we want the index to start at 0, we don't need to provide a start point at all.
-Eg. `range(5)` is equivalent to `range(0, 5)`.
-
-The looping variable doesn't have to be a number either; we can loop through each of the items in a list like this:
-```python
 for dog in my_dogs:
     print(f"{dog} is a good boy!")
 ```
+Pay special attention to the colon (:) at the end of the first line, and the fact that the next line is indented.
+These two things are part of Python's syntax rules. 
 
-We can also use the **len** function to loop through the items in a list by index, rather than the items themselves.
+We can also do calculations inside a for loop:
 ```python
-x_list = [5, 14, 23]
-y_list = [3, 40, 12]
-for index in range(len(x_list)):
-    print(x_list[index] + y_list[index])
+list_of_numbers = [1, 2, 3, 4, 5]
+for number in list_of_numbers:
+    new_number = number * 10
+    print(new_number)
 ```
 
 A **while loop** has similar behaviour, but is controlled a little differently.
