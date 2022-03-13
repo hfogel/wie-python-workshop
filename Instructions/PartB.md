@@ -9,12 +9,16 @@ To carry out any drawing commands, we need to open up a new window, called a **s
 ```python
 import turtle
 screen = turtle.getscreen() 
+turtle.done()  # keeps window open until we stop running
 ```
-<!-- put a picture of the screen with turtle here -->
+
+![](../images/turtle_screen.png)
 
 The black arrowhead in the middle of the screen is called the **turtle**. It is like our on-screen pen.
 
 Let us now look at the screen. It can be divided into four quadrants, as below. The turtle is at the (0, 0) position. 
+
+![](../images/quadrants.png)
 
 Our next step is to draw a shape, so we need to define a variable for the turtle. 
 
@@ -32,7 +36,7 @@ To move the turtle without drawing a line, use
 my_turtle.penup()
 ```
 
-We can use the commands *forward*, *backward*, *right*, and *left* to move my_turtle around the screen. Using commands *forward* and *backward* you can move the turtle in straight lines in the forward and backward directions. To turn right or left, we tell the turtle how far to rotate, with an angle specified in degrees. 
+We can use the commands *forward*, *backward*, *right*, and *left* to move `my_turtle` around the screen. Using commands *forward* and *backward* you can move the turtle in straight lines in the forward and backward directions. To turn right or left, we tell the turtle how far to rotate, with an angle specified in degrees. 
 
 Note that on a virtual screen the distance is measured in pixels, like we measure distance in cm on using a ruler. 
 
@@ -75,7 +79,7 @@ my_turtle.forward(100)
 
 To clear what's been drawn on your screen, use: 
 ```python
-screen.clear()
+my_turtle.clear()
 ```
 
 Now let’s say we want to draw a triangle that has equal sides (equilateral triangle), of length 100 pixels. How can we do that?
@@ -116,15 +120,15 @@ Apart from these, there are so many commands that we can use. For example, we ca
 
 ```python
 screen.bgcolor("blue")  # Try "yellow", "green", "red", ...
-sc.setup(width=1000, height=600)  # units are pixels
+screen.setup(width=575, height=325)  # units are pixels
 ```
 
 We can also change the size, shape, colour and speed of `my_turtle`:
 ```python
-turtle.shape("circle")
-right_pad.shapesize(stretch_len=6)  # stretches a circle into an oval
-turtle.color("orange")
-turtle.speed(5)  # can be an integer value from 0-10, with 10 being the fastest
+my_turtle.shape("circle")
+my_turtle.shapesize(stretch_wid=0.5)  # stretches a circle into an oval
+my_turtle.color("orange")
+my_turtle.speed(5)  # can be an integer value from 0-10, with 10 being the fastest
 ```
 
 >### *Coding Challenge #6*
